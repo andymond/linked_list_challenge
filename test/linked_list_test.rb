@@ -72,4 +72,16 @@ class LinkedListTest < Minitest::Test
     assert_equal 4, list.count
   end
 
+  def test_it_can_pop_node_off
+    list = LinkedList.new
+
+    list.append(3)
+    list.append(3)
+    list.append(4)
+
+    assert_equal 4, list.pop
+    assert_equal 2, list.count
+    assert_equal "33", list.to_s
+  end
+
 end

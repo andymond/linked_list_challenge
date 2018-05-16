@@ -85,5 +85,4 @@ class LinkedList
       end
     end
   end
-
 end

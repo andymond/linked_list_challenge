@@ -72,4 +72,16 @@ class LinkedList
     shifted.data
   end
 
+  def sort
+    current_node = @head
+    until current_node.next_node.nil?
+      # if current_node.data > current_node.next_node.data
+      #   temp_node = current_node
+      #   current_node.next_node = temp_node
+      #   current_node = current_node.next_node
+      # end
+      current_node = current_node.next_node
+    end
+  end
+
 end

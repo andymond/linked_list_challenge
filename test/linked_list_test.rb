@@ -49,9 +49,12 @@ class LinkedListTest < Minitest::Test
     list = LinkedList.new
 
     assert_equal 3, list.prepend(3)
-    assert_equal 3, list.head
+    assert_equal 3, list.head.data
+    assert_equal 1, list.count
     assert_equal 21, list.prepend(21)
-    assert_equal 21, list.head
+    assert_equal 21, list.head.data
+    assert_equal 3, list.head.next_node.data
+    assert_equal 2, list.count
   end
 
 end

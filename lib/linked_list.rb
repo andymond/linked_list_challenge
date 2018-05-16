@@ -32,4 +32,12 @@ class LinkedList
     data.join
   end
 
+  def prepend(node)
+    @count += 1
+    temp_node = @head
+    @head = Node.new(node)
+    @head.next_node = temp_node
+    node
+  end
+
 end

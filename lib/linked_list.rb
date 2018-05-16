@@ -19,8 +19,17 @@ class LinkedList
       end
       current_node.next_node = Node.new(node)
     end
-
     node
+  end
+
+  def to_s
+    data = []
+    current_node = @head
+    until current_node.nil?
+      data << current_node.data
+      current_node = current_node.next_node
+    end
+    data.join
   end
 
 end

@@ -84,4 +84,16 @@ class LinkedListTest < Minitest::Test
     assert_equal "33", list.to_s
   end
 
+  def test_it_can_shift_node_off
+    list = LinkedList.new
+
+    list.append(3)
+    list.append(3)
+    list.append(4)
+
+    assert_equal 3, list.shift
+    assert_equal 2, list.count
+    assert_equal "34", list.to_s
+  end
+
 end

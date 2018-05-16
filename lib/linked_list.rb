@@ -65,4 +65,11 @@ class LinkedList
     popped
   end
 
+  def shift
+    @count -= 1
+    shifted = @head
+    @head = shifted.next_node
+    shifted.data
+  end
+
 end

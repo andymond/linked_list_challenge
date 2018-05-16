@@ -24,6 +24,11 @@ class LinkedListTest < Minitest::Test
     assert_instance_of Node, list.head.next_node
     assert_equal 4, list.head.next_node.data
     assert_equal 2, list.count
+
+    assert_equal 3, list.append(3)
+    assert_instance_of Node, list.head.next_node.next_node
+    assert_equal 3, list.head.next_node.next_node.data
+    assert_equal 3, list.count
   end
 
 end

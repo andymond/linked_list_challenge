@@ -31,4 +31,18 @@ class LinkedListTest < Minitest::Test
     assert_equal 3, list.count
   end
 
+  def test_it_can_stringify_node_data
+    list = LinkedList.new
+
+    list.append(3)
+    list.append(3)
+    list.append(3)
+
+    assert_equal "333", list.to_s
+
+    list.append(21)
+
+    assert_equal "33321", list.to_s
+  end
+
 end

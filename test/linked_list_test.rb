@@ -11,4 +11,12 @@ class LinkedListTest < Minitest::Test
     assert_nil list.head
   end
 
+  def test_it_can_append_node
+    list = LinkedList.new
+
+    assert_equal 5, list.append(5)
+    assert_equal 5, list.head
+    assert_nil list.head.next_node
+  end
+
 end

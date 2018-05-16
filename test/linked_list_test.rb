@@ -45,4 +45,13 @@ class LinkedListTest < Minitest::Test
     assert_equal "33321", list.to_s
   end
 
+  def test_it_can_prepend_node
+    list = LinkedList.new
+
+    assert_equal 3, list.prepend(3)
+    assert_equal 3, list.head
+    assert_equal 21, list.prepend(21)
+    assert_equal 21, list.head
+  end
+
 end

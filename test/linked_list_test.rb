@@ -57,4 +57,18 @@ class LinkedListTest < Minitest::Test
     assert_equal 2, list.count
   end
 
+  def test_it_can_insert_a_node_at_an_index
+    list = LinkedList.new
+
+    list.append(3)
+    list.append(3)
+    list.append(3)
+
+    assert_equal "333", list.to_s
+
+    assert_equal 8, list.insert(1, 8)
+
+    assert_equal "3833", list.to_s
+  end
+
 end

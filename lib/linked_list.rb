@@ -5,13 +5,21 @@ class LinkedList
 
   def initialize
     @head = nil
-    @next_node = nil
     @count = 0
   end
 
   def append(node)
     @count += 1
-    @head = Node.new(node) if head.nil?
+    current_node = @head
+    if current_node.nil?
+      @head = Node.new(node)
+    else
+      until current_node.next_node.nil?
+        current_node = current_node.next_node
+      end
+      current_node.next_node = Node.new(node)
+    end
+
     node
   end
 

@@ -69,6 +69,7 @@ class LinkedListTest < Minitest::Test
     assert_equal 8, list.insert(1, 8)
 
     assert_equal "3833", list.to_s
+    assert_equal 4, list.count
   end
 
 end

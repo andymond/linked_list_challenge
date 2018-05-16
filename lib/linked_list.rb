@@ -40,4 +40,17 @@ class LinkedList
     node
   end
 
+  def insert(index, node)
+    @count += 1
+    current_node = @head
+    unless index <= 0
+      (index - 1).times do
+        current_node = current_node.next_node
+      end
+    end
+    temp_node = current_node.next_node
+    current_node.next_node = Node.new(node)
+    current_node.next_node.next_node = temp_node
+    node
+  end
 end

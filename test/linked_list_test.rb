@@ -96,4 +96,17 @@ class LinkedListTest < Minitest::Test
     assert_equal "34", list.to_s
   end
 
+  def test_it_can_sort_itself
+    list = LinkedList.new
+
+    list.append(3)
+    list.append(1)
+    list.append(4)
+    list.append(2)
+
+    list.sort
+
+    assert_equal "1234", list.to_s
+  end
+
 end

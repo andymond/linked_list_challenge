@@ -15,7 +15,8 @@ class LinkedListTest < Minitest::Test
     list = LinkedList.new
 
     assert_equal 5, list.append(5)
-    assert_equal 5, list.head
+    assert_instance_of Node, list.head
+    assert_equal 5, list.head.data
     assert_nil list.head.next_node
   end
 

@@ -16,5 +16,4 @@ class NodeTest < Minitest::Test
 
     assert_nil node.next_node
   end
-
 end
